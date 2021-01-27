@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "": "vendor\\hcodebr\\php-classes\\src"
+            "Casintec\\": "vendor\\casintec\\php-classes\\src"
         }
     }
 }
