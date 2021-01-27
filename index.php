@@ -8,7 +8,7 @@ $app->config('debug', true);
 
 $app->get('/', function() {
     
-	echo "OK.";
+	echo "OK. Outro teste de Sincronia";
 
 });
 
