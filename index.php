@@ -8,7 +8,7 @@ $app->config('debug', true);
 
 $app->get('/', function() {
     
-	echo "OK";
+	echo "OK! Tudo Funcionando!";
 
 });
 
