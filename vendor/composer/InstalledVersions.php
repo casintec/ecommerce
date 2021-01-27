@@ -14,24 +14,24 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-main',
-    'version' => 'dev-main',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => 'a270f33651c2f4193ecdf9a88d2fd587871e3d8c',
+    'reference' => 'f551604b55ef229d20340a308217e348c032df2b',
     'name' => 'casintec/ecommerce',
   ),
   'versions' => 
   array (
     'casintec/ecommerce' => 
     array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => 'a270f33651c2f4193ecdf9a88d2fd587871e3d8c',
+      'reference' => 'f551604b55ef229d20340a308217e348c032df2b',
     ),
     'phpmailer/phpmailer' => 
     array (
