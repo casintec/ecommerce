@@ -65,7 +65,7 @@ class Product extends Model {
         
         $sql = new Sql();
 
-        $sql->query("DELETE FROM tb_product WHERE idproduct = :idproduct", [
+        $sql->query("DELETE FROM tb_products WHERE idproduct = :idproduct", [
             ':idproduct'=>$this->getidproduct()
         ]);
 
@@ -80,7 +80,7 @@ class Product extends Model {
 
 		if (file_exists(
 			$_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . 
-			"res" . DIRECTORY_SEPARATOR . 
+			"resources" . DIRECTORY_SEPARATOR . 
 			"site" . DIRECTORY_SEPARATOR . 
 			"img" . DIRECTORY_SEPARATOR . 
 			"products" . DIRECTORY_SEPARATOR . 
