@@ -1,5 +1,6 @@
 <?php 
 
+use \Casintec\Page;
 use \Casintec\PageAdmin;
 use \Casintec\Model\User;
 use \Casintec\Model\Category;
@@ -98,7 +99,7 @@ $app->get('/category/:idcategory', function($idcategory){
 
 	$category->get((int)$idcategory);
 
-	$page = new PageAdmin();
+	$page = new Page();
 
 	$page->setTpl("category", [
 		'category'=>$category->getValues(),
