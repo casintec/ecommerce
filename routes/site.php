@@ -3,7 +3,7 @@
 use \Casintec\Page;
 use \Casintec\Model\Product;
 use \Casintec\Model\Category;
-
+use \Casintec\Model\Cart;
 
 $app->get('/', function() {
 	
@@ -53,8 +53,6 @@ $app->get("/products/:desurl", function($desurl){
 
 	$product->getFromURL($desurl);
 
-	var_dump($desurl);
-
 	$page = new Page();
 
 	$page->setTpl("product-detail", [
@@ -62,6 +60,16 @@ $app->get("/products/:desurl", function($desurl){
 		'categories'=>$product->getCategories()
 	]);
 
+
+});
+
+$app->get("/cart", function(){
+
+	$cart = Cart::getFromSession();
+
+	$page = new Page();
+
+	$page->setTpl("cart");
 
 });
 
