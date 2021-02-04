@@ -133,7 +133,7 @@ class Product extends Model {
 
 		}
 
-		$dist = $_SERVER['DOCUMENT_ROOT'] . 
+		$dist = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR .
 			"resources" . DIRECTORY_SEPARATOR . 
 			"site" . DIRECTORY_SEPARATOR . 
 			"img" . DIRECTORY_SEPARATOR . 

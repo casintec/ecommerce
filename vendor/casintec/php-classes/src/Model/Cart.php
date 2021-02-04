@@ -196,7 +196,7 @@ class Cart extends Model{
                 'nCdEmpresa'=>'',
                 'sDsSenha'=>'',
                 'nCdServico'=>'40010',
-                'sCepOrigem'=>'09853120',
+                'sCepOrigem'=>'05890000',
                 'sCepDestino'=>$nrzipcode,
                 'nVlPeso'=>$totals['vlweight'],
                 'nCdFormato'=>'1',
