@@ -50,7 +50,7 @@
 
                             <?php }else{ ?>
 
-                            <li><a href="#"><i class="fa fa-lock"></i> Login</a></li>
+                            <li><a href="/login"><i class="fa fa-lock"></i> Login</a></li>
                             <?php } ?>
 
                         </ul>
