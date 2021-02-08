@@ -68,9 +68,9 @@
 											<label class="" for="billing_state">Estado</label>
 											<input type="text" id="billing_state" name="desstate" placeholder="Estado" value="{$address.desstate}" class="input-text ">
 										</p>
-										<p id="billing_state_field" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state">
-											<label class="" for="billing_state">País</label>
-											<input type="text" id="billing_state" name="descountry" placeholder="País" value="{$address.descountry}" class="input-text ">
+										<p id="billing_country_field" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state">
+											<label class="" for="billing_country">País</label>
+											<input type="text" id="billing_country" name="descountry" placeholder="País" value="{$address.descountry}" class="input-text ">
 										</p>
 										<div class="clear"></div>
 										<h3 id="order_review_heading" style="margin-top:30px;">Detalhes do Pedido</h3>
@@ -113,6 +113,14 @@
 													</tr>
 												</tfoot>
 											</table>
+											<p id="billing_state_field" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state" style="margin:15px; display:inline-flex">
+												<input type="radio" id="method-pagseguro" name="payment-method" placeholder="País" value="1">
+												<label class="" for="method-pagseguro"><img src="/resources/site/img/logo-pagseguro.png" style="height:60px"/></label>
+											</p>
+											<p id="billing_state_field" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state" style="margin:15px; display: inline-flex;">
+												<input type="radio" id="method-paypal" name="payment-method" placeholder="País" value="2">
+												<label class="" for="method-paypal"><img src="/resources/site/img/logo-paypal.png" style="height:60px"/></label>
+											</p>
 											<div id="payment">
 												<div class="form-row place-order">
 													<input type="submit" data-value="Place order" value="Continuar" id="place_order" name="woocommerce_checkout_place_order" class="button alt">
