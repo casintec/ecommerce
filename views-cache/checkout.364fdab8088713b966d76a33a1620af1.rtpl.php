@@ -37,11 +37,24 @@
                                             <input type="text" value="<?php echo htmlspecialchars( $cart["deszipcode"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" placeholder="00000-000" id="billing_address_1" name="zipcode" class="input-text ">
                                             <input type="submit" value="Atualizar CEP" id="place_order" class="button alt" formaction="/checkout" formmethod="get">
 										</p>
-										<p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
-											<label class="" for="billing_address_1">Endereço <abbr title="required" class="required">*</abbr>
-											</label>
-											<input type="text" value="<?php echo htmlspecialchars( $address["desaddress"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" placeholder="Logradouro, número e bairro" id="billing_address_1" name="desaddress" class="input-text ">
-										</p>
+										<div class="row">
+											<div class="col-sm-9">
+												<p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
+													<label class="" for="billing_address_1">Endereço <abbr title="required" class="required">*</abbr>
+													</label>
+													<input type="text" value="<?php echo htmlspecialchars( $address["desaddress"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" placeholder="Logradouro, número e bairro" id="billing_address_1" name="desaddress" class="input-text ">
+												</p>
+											</div>
+											<div class="col-sm-3">
+												<p id="billing_number_1_field" class="form-row form-row-wide number-field validate-required">
+													<label class="" for="billing_number_1">Número <abbr title="required" class="required">*</abbr>
+													</label>
+													<input type="text" value="<?php echo htmlspecialchars( $address["desnumber"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" placeholder="Número" id="billing_desnumber_1" name="desnumber" class="input-text ">
+												</p>
+											</div>
+										</div>
+										
+
 										<p id="billing_address_2_field" class="form-row form-row-wide address-field">
 											<input type="text" value="<?php echo htmlspecialchars( $address["descomplement"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" placeholder="Complemento (opcional)" id="billing_address_2" name="descomplement" class="input-text ">
                                         </p>
