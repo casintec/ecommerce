@@ -452,8 +452,8 @@ class User extends Model {
 
 		$sql = new Sql();
 
-		$results = $sql->select("
-			SELECT SQL_CALC_FOUND_ROWS *
+		$results = $sql->select(
+			"SELECT SQL_CALC_FOUND_ROWS *
 			FROM tb_users a 
 			INNER JOIN tb_persons b USING(idperson) 
 			ORDER BY b.desperson
