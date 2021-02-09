@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'f551604b55ef229d20340a308217e348c032df2b',
+    'reference' => '8b910177826ca7db9105f6fdbef7fb774c741e80',
     'name' => 'casintec/ecommerce',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'f551604b55ef229d20340a308217e348c032df2b',
+      'reference' => '8b910177826ca7db9105f6fdbef7fb774c741e80',
     ),
     'phpmailer/phpmailer' => 
     array (

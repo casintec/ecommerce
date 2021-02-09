@@ -275,8 +275,8 @@ class User extends Model {
 
 		$sql = new Sql();
 
-		$results = $sql->select("
-			SELECT *
+		$results = $sql->select(
+			"SELECT *
 			FROM tb_userspasswordsrecoveries a
 			INNER JOIN tb_users b USING(iduser)
 			INNER JOIN tb_persons c USING(idperson)
