@@ -1,17 +1,17 @@
 {
-    "name": "hcodebr/php-classes",
+    "name": "casintec/php-classes",
     "minimum-stability": "dev",
     "type": "library",
     "description": "Classes PHP",
-    "homepage": "https://github.com/hcodebr/php-classes",
+    "homepage": "https://github.com/casintec/php-classes",
     "authors": [
         {
             "name": "Hcode Treinamentos",
-            "email": "suporte@hcode.com.br"
+            "email": "levy.casintec@gmail.com"
         }
     ],
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.2",
         "rain/raintpl":"3.0.0"
     },
     "autoload": {

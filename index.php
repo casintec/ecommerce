@@ -18,6 +18,16 @@ require_once("functions.php");
 
 require_once("routes/site.php");
 
+require_once("routes/site-cart.php");
+
+require_once("routes/site-checkout.php");
+
+require_once("routes/site-login.php");
+
+require_once("routes/site-profile.php");
+
+require_once("routes/site-pagseguro.php");
+
 require_once("routes/admin.php");
 
 require_once("routes/admin-users.php");

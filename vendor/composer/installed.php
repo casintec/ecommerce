@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '08def351ed39e3be20b47bfa66aa88580ce094dc',
+    'reference' => '6a869d1b8b7a90fce2f4b331b39e00ff7f1acea2',
     'name' => 'casintec/ecommerce',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '08def351ed39e3be20b47bfa66aa88580ce094dc',
+      'reference' => '6a869d1b8b7a90fce2f4b331b39e00ff7f1acea2',
     ),
     'guzzlehttp/guzzle' => 
     array (
