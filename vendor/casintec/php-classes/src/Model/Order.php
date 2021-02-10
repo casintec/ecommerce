@@ -6,7 +6,6 @@ use \Casintec\DB\Sql;
 use \Casintec\Model;
 use \Casintec\Model\Cart;
 
-
 class Order extends Model{
 
     const SESSION = "OrderSession";

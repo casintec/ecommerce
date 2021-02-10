@@ -265,3 +265,9 @@
     <option>{{quantity}}x de R${{installmentAmount}} com juros (R${{totalAmount}})</option>
 </script>
 <script src="{$pagseguro.urlJS}"></script>
+
+<script>
+
+PagSeguroDirectPayment.setSessionId('{$pagseguro.id}');
+
+</script>

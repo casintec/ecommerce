@@ -2,19 +2,9 @@
 
 use \Casintec\Page;
 use \Casintec\Model\User;
-use \GuzzleHttp\Client;
 use \Casintec\Pagseguro\Config;
+use \Casintec\Pagseguro\Transporter;
 use \Casintec\Model\Order;
-
-
-$app->get('/payment/pagseguro', function() {
-	
-	$client = new Client();
-    $response = $client->request('POST', Config::getUrlSessions() . "?" . http_build_query(Config::getAuth()));
-
-    echo $response->getBody()->getContents(); // '{"id": 1420053, "name": "guzzle", ...}'
-
-});
 
 $app->get("/payment", function(){
 
@@ -39,7 +29,8 @@ $app->get("/payment", function(){
         'msgError'=>Order::getError(),
         'years'=>$years,
         'pagseguro'=>[
-            "urlJS"=>Config::getUrlJs()
+            "urlJS"=>Config::getUrlJs(),
+            "id"=>Transporter::createSession()
         ]
     ]);
 
