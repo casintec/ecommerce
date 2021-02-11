@@ -42,15 +42,17 @@
                                                     <a class="nav-link" data-toggle="tab" href="#tab-boleto" role="tab">Boleto</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="tab" href="#tab-debito" role="tab">Débito</a>
+                                                    <a class="nav-link" data-toggle="tab" href="#tab-credito" role="tab">Cartão de Crédito</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" data-toggle="tab" href="#tab-credito" role="tab">Cartão de Crédito</a>
+                                                    <a class="nav-link" data-toggle="tab" href="#tab-debito" role="tab">Débito Online</a>
                                                 </li>
                                             </ul>
                                             
                                             <!-- Tab panes -->
                                             <div class="tab-content">
+
+                                                <!--Tab Boleto-->
                                                 <div class="tab-pane" id="tab-boleto" role="tabpanel">
 
                                                     <form action="/payment/boleto" class="checkout" method="post" name="checkout" style="padding:10px;" id="form-boleto">
@@ -86,45 +88,8 @@
                                                     </form>
 
                                                 </div>
-                                                <div class="tab-pane" id="tab-debito" role="tabpanel">
-
-                                                    <form action="/payment/debit" class="checkout" method="post" name="checkout" style="padding:10px;" id="form-debit">
-
-                                                        <div class="row">
-                                                            <div class="col-sm-4">
-                                                                <div class="form-row form-row-wide address-field validate-required">
-                                                                    <label class="" for="cpf_field">CPF:</label>
-                                                                    <input type="text" required="required" placeholder="" id="cpf_field" name="cpf" class="input-text">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-4">
-                                                                <div class="form-row form-row-wide address-field validate-required">
-                                                                    <label class="" for="nascimento_field">Data de nascimento:</label>
-                                                                    <input type="date" required="required" placeholder="" id="nascimento_field" name="birth" class="input-text" style="margin-bottom: 10px; width: 100%; border: 1px solid #ddd; padding: 2px 10px;">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-4">
-                                                                <div class="form-row form-row-wide address-field validate-required">
-                                                                    <label class="" for="telefone_field">Telefone:</label>
-                                                                    <input type="text" required="required" maxlength="2" minlength="2" placeholder="DDD" id="ddd_field" name="ddd" class="input-text" style="float:left; width: 60px;">
-                                                                    <input type="text" required="required" maxlength="9" minlength="8" placeholder="Número" id="telefone_field" name="phone" class="input-text" style="float: left; margin-left: 10px; width: calc(100% - 70px);">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <fieldset class="form-group row">
-                                                            <div class="col-sm-10 contents"></div>
-                                                        </fieldset>
-
-                                                        <div class="form-row place-order">
-                                                                <button type="submit" id="place_order_debit" name="woocommerce_checkout_place_order" class="button alt btn"><i class="fa fa-refresh fa-spin fa-fw margin-bottom hide"></i>Continuar</button>
-                                                        </div>
-
-                                                        <div class="clear"></div>
-
-                                                    </form>
-
-                                                </div>
+                                                
+                                                <!--TabCredit-->
                                                 <div class="tab-pane" id="tab-credito" role="tabpanel">
 
                                                     <form action="/payment/credit" class="checkout" method="post" name="checkout" style="padding:10px;" id="form-credit">
@@ -232,6 +197,48 @@
                                                     </form>
 
                                                 </div>
+
+                                                <!--Tab Debito-->
+                                                <div class="tab-pane" id="tab-debito" role="tabpanel">
+
+                                                    <form action="/payment/debit" class="checkout" method="post" name="checkout" style="padding:10px;" id="form-debit">
+
+                                                        <div class="row">
+                                                            <div class="col-sm-4">
+                                                                <div class="form-row form-row-wide address-field validate-required">
+                                                                    <label class="" for="cpf_field">CPF:</label>
+                                                                    <input type="text" required="required" placeholder="" id="cpf_field" name="cpf" class="input-text">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <div class="form-row form-row-wide address-field validate-required">
+                                                                    <label class="" for="nascimento_field">Data de nascimento:</label>
+                                                                    <input type="date" required="required" placeholder="" id="nascimento_field" name="birth" class="input-text" style="margin-bottom: 10px; width: 100%; border: 1px solid #ddd; padding: 2px 10px;">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <div class="form-row form-row-wide address-field validate-required">
+                                                                    <label class="" for="telefone_field">Telefone:</label>
+                                                                    <input type="text" required="required" maxlength="2" minlength="2" placeholder="DDD" id="ddd_field" name="ddd" class="input-text" style="float:left; width: 60px;">
+                                                                    <input type="text" required="required" maxlength="9" minlength="8" placeholder="Número" id="telefone_field" name="phone" class="input-text" style="float: left; margin-left: 10px; width: calc(100% - 70px);">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <fieldset class="form-group row">
+                                                            <div class="col-sm-10 contents"></div>
+                                                        </fieldset>
+
+                                                        <div class="form-row place-order">
+                                                                <button type="submit" id="place_order_debit" name="woocommerce_checkout_place_order" class="button alt btn"><i class="fa fa-refresh fa-spin fa-fw margin-bottom hide"></i>Continuar</button>
+                                                        </div>
+
+                                                        <div class="clear"></div>
+
+                                                    </form>
+
+                                                </div>
+
                                             </div>
                                         </div>
 
@@ -270,4 +277,73 @@
 
 PagSeguroDirectPayment.setSessionId('<?php echo htmlspecialchars( $pagseguro["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>');
 
+</script>
+
+<script>
+    scripts.push(function(){
+
+        function showError(error){
+
+            $("#alert-error span.msg").text(error);
+            $("#alert-error").removeClass("hide");
+
+        }
+
+        PagSeguroDirectPayment.getPaymentMethods({
+            amount: parseFloat("{order.vltotal}"),
+            success: function(response) {
+
+                var tplDebit = Handlebars.compile($("#tpl-payment-debit").html());
+                var tplCredit = Handlebars.compile($("#tpl-payment-credit").html());
+
+                $.each(response.paymentMethods.ONLINE_DEBIT.options, function(index, option){
+
+                    $("#tab-debito .contents").append(tplDebit({
+                        value:option.name,
+                        image:option.images.MEDIUM.path,
+                        text:option.displayName
+                    }));
+
+                    $("#loading").hide();
+
+                    $("#tabs-methods .nav-link:first").tab("show");
+
+                    $("#payment-methods").removeClass("hide");
+
+                });
+
+                $.each(response.paymentMethods.CREDIT_CARD.options, function(index, option){
+
+                    $("#tab-credito .contents").append(tplCredit({
+                        name:option.name,
+                        image:option.images.MEDIUM.path,
+                    }));
+
+                    $("#loading").hide();
+
+                    $("#tabs-methods .nav-link:first").tab("show");
+
+                    $("#payment-methods").removeClass("hide");
+
+                });
+            
+            },
+            error: function(response) {
+                // Callback para chamadas que falharam.
+                var errors = [];
+
+                for (var code in response.errors){
+                    errors.push(response.errors[code]);
+                }
+
+                showError(errors.toString());
+                
+            },
+            complete: function(response) {
+                
+                // Callback para todas chamadas.
+            
+            }
+        });
+    })
 </script>

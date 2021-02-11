@@ -75,6 +75,8 @@
         <!-- Latest jQuery form server -->
         <script src="https://code.jquery.com/jquery.min.js"></script>
 
+        <script src="/resources/site/js/handlebars.min-v4.7.6.js"></script>
+
         <!-- Bootstrap JS form CDN -->
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
@@ -91,5 +93,15 @@
         <!-- Slider -->
         <script type="text/javascript" src="/resources/site/js/bxslider.min.js"></script>
         <script type="text/javascript" src="/resources/site/js/script.slider.js"></script>
+
+        <script>
+            $(function(){
+                if (scripts instanceof Array){
+                    $.each(scripts, function(index, fn){
+                        if(typeof fn === 'function') fn();
+                    })
+                }
+            });
+        </script>
     </body>
 </html>
