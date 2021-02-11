@@ -4,20 +4,6 @@ use Casintec\Page;
 use Casintec\Model\Cart;
 use Casintec\Model\Product;
 
-$app->get("/cart", function(){
-
-	$cart = Cart::getFromSession();
-
-	$page = new Page();
-
-	$page->setTpl("cart", [
-		'cart'=>$cart->getValues(),
-		'products'=>$cart->getProducts(),
-		'error'=>Cart::getMsgError()
-	]);
-
-});
-
 $app->get("/cart/:idproduct/add", function($idproduct){
 
 	$product = new Product();
@@ -77,5 +63,19 @@ $app->post("/cart/freight", function(){
 
 	header("Location: /cart");
 	exit;
+
+});
+
+$app->get("/cart", function(){
+
+	$cart = Cart::getFromSession();
+
+	$page = new Page();
+
+	$page->setTpl("cart", [
+		'cart'=>$cart->getValues(),
+		'products'=>$cart->getProducts(),
+		'error'=>Cart::getMsgError()
+	]);
 
 });
